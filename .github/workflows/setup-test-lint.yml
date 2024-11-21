@@ -1,8 +1,16 @@
 name: setup-test-lint
 on: push
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    -run: make setup
-    -run: make test
-    -run: make lint
+  setup:
+    runs-on: ubuntu-latest
+      steps:
+        -run: make setup
+  test:
+    runs-on: ubuntu-latest
+      steps:
+        -run: make test
+  lint:
+    runs-on: ubuntu-latest
+      steps:
+        -run: make lint
+
