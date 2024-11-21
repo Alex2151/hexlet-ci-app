@@ -3,14 +3,14 @@ on: push
 jobs:
   setup:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         -run: make setup
   test:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         -run: make test
   lint:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         -run: make lint
 
